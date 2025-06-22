@@ -1,0 +1,39 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 16px;
+    border-radius: 68px;
+    border: 1px solid var(--color-black-200);
+    min-height: 48px;
+    transition: border-color 0.3s ease;
+}
+
+.container:hover {
+    border: 1px solid var(--color-purple-400);
+}
+
+.searchIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.input {
+    flex-grow: 1;
+    background: transparent;
+    align-self: center;
+    border: none;
+    outline: 0;
+    color: #191919;
+    line-height: 1.2;
+    font-family: inherit;
+}
+
+.input::placeholder {
+    color: var(--color-black-300);
+}

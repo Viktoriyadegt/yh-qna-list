@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: var(--font-family), sans-serif;
   margin: 0;
