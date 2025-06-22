@@ -1,0 +1,29 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register {
+    background-color: var(--color-purple-700);
+    color: var(--color-white-900);
+    gap: 8px;
+    padding: 12px 29px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+.login {
+    background: none;
+    color: var(--color-purple-700);
+}
+
+.fullWidth {
+    width: 100%;
+}
+

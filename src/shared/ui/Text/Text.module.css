@@ -74,14 +74,20 @@
     text-align: center;
 }
 
-.color-primary {
+.bt1 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body4);
+    line-height: var(--line-height-120);
+}
+
+.color-black {
     color: var(--color-black-900);
 }
 
-.color-secondary {
-    color: var(--color-black-800);
+.color-white {
+    color: var(--color-white-900);
 }
 
-.color-accent {
-    color: var(--color-white-900);
+.color-purple {
+    color: var(--color-purple-700);
 }
