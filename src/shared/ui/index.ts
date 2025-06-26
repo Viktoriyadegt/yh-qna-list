@@ -1,3 +1,6 @@
 export * from './Text/Text.tsx'
 export * from './Button/Button.tsx'
 export * from './Input/Input.tsx'
+export * from './Pagination/Pagination.tsx'
+export * from './Card/Card.tsx'
+export * from './Accordion/Accordion.tsx'

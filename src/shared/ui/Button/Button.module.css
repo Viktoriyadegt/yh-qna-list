@@ -3,9 +3,15 @@
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.button > img {
+    margin-right: 6px;
+    width: 20px;
+    height: 20px;
 }
 
 .register {
@@ -15,7 +21,6 @@
     padding: 12px 29px;
     cursor: pointer;
     border: 1px solid transparent;
-    border-radius: 12px;
 }
 
 .login {
@@ -23,7 +28,27 @@
     color: var(--color-purple-700);
 }
 
+.skill {
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    width: fit-content;
+    border: 1px solid var(--color-black-200);
+    user-select: none;
+    background-color: transparent;
+}
+
+.skill:active {
+    border: 1px solid var(--color-purple-700);
+}
+
+.skill:hover {
+    background-color: var(--color-purple-700);
+    color: var(--color-white-900);
+}
+
 .fullWidth {
     width: 100%;
 }
-

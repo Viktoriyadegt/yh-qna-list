@@ -5,7 +5,7 @@ import s from './Button.module.css'
 export type ButtonProps<T extends ElementType = 'button'> = {
   as?: T
   fullWidth?: boolean
-  variant?: 'register' | 'login'
+  variant?: 'register' | 'login' | 'skill'
 } & ComponentPropsWithoutRef<T>
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
