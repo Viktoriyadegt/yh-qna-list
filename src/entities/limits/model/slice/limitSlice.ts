@@ -1,11 +1,11 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
-type QuestionsState = {
+type Limits = {
   specialTotal: number
   skillTotal: number
 }
 
-const initialState: QuestionsState = {
+const initialState: Limits = {
   specialTotal: 5,
   skillTotal: 8,
 }
