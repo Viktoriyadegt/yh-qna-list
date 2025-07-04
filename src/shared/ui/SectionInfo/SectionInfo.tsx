@@ -10,7 +10,7 @@ export const SectionInfo = ({ title, children }: Props) => {
   return (
     <div className={s.section}>
       <Text variant={'body-16'} color={'black7'}>
-        {title}:
+        {title}
       </Text>
       <div className={s.list}>{children}</div>
     </div>
