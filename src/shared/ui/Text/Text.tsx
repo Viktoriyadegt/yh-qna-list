@@ -4,10 +4,23 @@ import s from './Text.module.css'
 
 export type TextProps<T extends ElementType = 'p'> = {
   as?: T
-  children: ReactNode
-  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'body-14' | 'body-16' | 'body-18-sb' | 'body-20' | 'body-20-med' | 'bt1'
+  children?: ReactNode
+  variant?:
+    | 'h1'
+    | 'h2'
+    | 'body-14'
+    | 'body-14-med'
+    | 'body-14-sb'
+    | 'body-16'
+    | 'body-16-sb'
+    | 'body-18-sb'
+    | 'body-16-med'
+    | 'body-20'
+    | 'body-20-med'
+    | 'bt1'
+    | 'body-24-med'
   className?: string
-  color?: 'black' | 'white' | 'purple'
+  color?: 'black' | 'white' | 'purple' | 'black8' | 'black7'
 } & ComponentPropsWithoutRef<T>
 
 export const Text = <T extends ElementType = 'p'>({

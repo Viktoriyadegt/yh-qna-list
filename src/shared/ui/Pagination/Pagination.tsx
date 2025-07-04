@@ -43,7 +43,7 @@ export const Pagination = (props: Type) => {
           className={s.arrowButton}
           onClick={onPrevious}
         >
-          <img src={arrowBack} alt="ArrowBack" className={s.arrowIcon} />
+          <img loading={'lazy'} src={arrowBack} alt="ArrowBack" className={s.arrowIcon} />
         </button>
 
         {paginationRange.map((pageNumber, index) => {

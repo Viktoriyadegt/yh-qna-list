@@ -13,26 +13,6 @@
     text-transform: uppercase;
 }
 
-.h3 {
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h3);
-    line-height: var(--line-height-115);
-    text-transform: uppercase;
-}
-
-.h4 {
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h4);
-    line-height: var(--line-height-120);
-}
-
-.h5 {
-    font-weight: var(--font-weight-medium);
-    font-size: var(--font-size-h4);
-    line-height: var(--line-height-120);
-    text-transform: uppercase;
-}
-
 .body-12 {
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-body1);
@@ -44,7 +24,18 @@
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-body2);
     line-height: var(--line-height-120);
-    text-align: center;
+}
+
+.body-14-med {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body2);
+    line-height: var(--line-height-120);
+}
+
+.body-14-sb {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-body2);
+    line-height: var(--line-height-120);
 }
 
 .body-16 {
@@ -53,31 +44,39 @@
     line-height: var(--line-height-130);
 }
 
+.body-16-sb {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-body3);
+    line-height: var(--line-height-120);
+}
+
+.body-16-med {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body3);
+    line-height: var(--line-height-130);
+}
+
 .body-18-sb {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-body4);
     line-height: var(--line-height-120);
-    text-align: center;
 }
 
 .body-20 {
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-body5);
     line-height: var(--line-height-120);
-    text-align: center;
 }
 .body-20-med {
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-body5);
     line-height: var(--line-height-120);
-    text-align: center;
 }
 
 .body-24-med {
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-body6);
     line-height: var(--line-height-120);
-    text-align: center;
 }
 
 .bt1 {
@@ -86,8 +85,18 @@
     line-height: var(--line-height-120);
 }
 
+/* colors */
+
 .color-black {
     color: var(--color-black-900);
+}
+
+.color-black8{
+    color: var(--color-black-800);
+}
+
+.color-black7{
+    color: var(--color-black-700);
 }
 
 .color-white {

@@ -1,0 +1,28 @@
+.card {
+    flex-grow: 1;
+    gap: 0;
+    padding: 24px 20px 40px;
+    box-shadow: 0 4px 10px 0 #6a63761a;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.title {
+    margin: 0;
+}
+
+.separator {
+    margin-bottom: 24px;
+    border-top-width: 0;
+    border-bottom-color: var(--color-black-50);
+}
+
+.navigate {
+    justify-content: flex-end;
+    gap: 8px;
+}

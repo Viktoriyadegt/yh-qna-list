@@ -1,6 +1,7 @@
 .container {
     padding: 16px 24px;
     border-radius: 8px;
+    margin-bottom: 16px;
     box-shadow: 0 4px 10px 0 rgba(106, 99, 118, 0.1);
     transition: padding 0.2s ease-in-out;
 }
@@ -54,6 +55,7 @@
 .title {
     position: relative;
     padding-left: 16px;
+    text-align: start;
 }
 
 .title::before {

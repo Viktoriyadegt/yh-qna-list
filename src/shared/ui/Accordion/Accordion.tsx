@@ -1,6 +1,6 @@
 import { useState, type ReactNode, useRef } from 'react'
 import s from './Accordion.module.css'
-import arrowDown from './../../assets/ArrowDown.svg'
+import arrowDown from '../../assets/ArrowDown.svg'
 import { Text } from '../../ui'
 import clsx from 'clsx'
 
@@ -21,7 +21,12 @@ const Accordion = ({ children, title, className }: Props) => {
           <Text variant={'body-20-med'} color={'black'} className={s.title}>
             {title}
           </Text>
-          <img src={arrowDown} alt="AccordionArrow" className={clsx(s.showIconBottom, isOpen && s.showIconTop)} />
+          <img
+            loading={'lazy'}
+            src={arrowDown}
+            alt="AccordionArrow"
+            className={clsx(s.showIconBottom, isOpen && s.showIconTop)}
+          />
         </button>
       </div>
       <div

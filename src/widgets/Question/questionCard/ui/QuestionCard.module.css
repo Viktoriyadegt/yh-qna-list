@@ -1,0 +1,29 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.navigate {
+   justify-content: flex-start;
+    gap: 8px;
+}
+
+.navigate img{
+     transform: rotate(-180deg);
+}
+
+.navigate :hover {
+    text-decoration: underline;
+}
+
+

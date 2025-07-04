@@ -28,7 +28,7 @@
     color: var(--color-purple-700);
 }
 
-.skill {
+.chip {
     height: 42px;
     display: flex;
     justify-content: center;
@@ -40,14 +40,27 @@
     background-color: transparent;
 }
 
-.skill:active {
-    border: 1px solid var(--color-purple-700);
-}
-
-.skill:hover {
+.chip:hover {
     background-color: var(--color-purple-700);
     color: var(--color-white-900);
 }
+
+.chip.active {
+    border: 1px solid var(--color-purple-700);
+}
+
+.expandable {
+    justify-content: flex-start;
+    margin-top: 8px;
+    color: var(--color-purple-700);
+    height: 20px;
+}
+
+.expandable:hover {
+    text-decoration: underline;
+}
+
+
 
 .fullWidth {
     width: 100%;

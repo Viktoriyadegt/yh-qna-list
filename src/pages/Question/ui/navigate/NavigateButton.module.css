@@ -1,0 +1,13 @@
+.section {
+    display: flex;
+    gap: 20px;
+}
+
+.navigate {
+    gap: 8px;
+}
+
+.navigate img{
+    transform: rotate(-180deg);
+}
+
