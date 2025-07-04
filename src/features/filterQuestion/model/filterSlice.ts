@@ -1,5 +1,6 @@
 import type { FiltersQuery } from '@/entities/questions'
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import { toggleItem } from '@/shared/utils'
 
 export const initialState: FiltersQuery = {
   page: 1,
@@ -28,12 +29,7 @@ export const filterSlice = createSlice({
       state.page = 1
     },
     setSkills: (state, action: PayloadAction<number>) => {
-      const index = state.skills.indexOf(action.payload)
-      if (index !== -1) {
-        state.skills.splice(index, 1)
-      } else {
-        state.skills.push(action.payload)
-      }
+      state.skills = toggleItem(state.skills, action.payload)
     },
     setComplexity: (state, action: PayloadAction<number[]>) => {
       const index = state.complexity.indexOf(action.payload[0])
@@ -45,12 +41,7 @@ export const filterSlice = createSlice({
       state.page = 1
     },
     setRate: (state, action: PayloadAction<number>) => {
-      const index = state.rate.indexOf(action.payload)
-      if (index !== -1) {
-        state.rate.splice(index, 1)
-      } else {
-        state.rate.push(action.payload)
-      }
+      state.rate = toggleItem(state.rate, action.payload)
     },
     setFilters: (state, action: PayloadAction<Partial<FiltersQuery>>) => {
       return { ...state, ...action.payload }

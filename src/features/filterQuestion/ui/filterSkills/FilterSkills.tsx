@@ -12,7 +12,7 @@ export const FilterSkills = () => {
   const skillTotal = useAppSelector(selectSkillTotal)
   const specializations = useAppSelector(selectSpecializations)
   const { data: skills } = useGetSkillsQuery({ limit: skillTotal, specializations })
-  const total = skills?.total || 5
+  const total = skills?.total || 8
 
   const { show, toggleShow } = useToggleLimit(skillTotal, 8, total, setSkillTotal)
 
