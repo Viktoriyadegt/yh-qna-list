@@ -1,6 +1,6 @@
 import { useAppSelector } from '@/shared/api/config/store.ts'
 import { useDispatch } from 'react-redux'
-import s from '../specialization/FilterSpecializations.module.css'
+import s from './FilterComplexity.module.css'
 import { Button, Text } from '@/shared/ui'
 import { selectComplexity, setComplexity } from '@/features/filterQuestion'
 

@@ -1,12 +1,17 @@
 import s from '../QuestionsFilterCard.module.css'
-import { SearchQuestion } from '@/features/searchQuestion'
-import { FilterComplexity, FilterRating, FilterSkills, FilterSpecializations } from '@/features/filterQuestion'
+import {
+  FilterComplexity,
+  FilterKeyword,
+  FilterRating,
+  FilterSkills,
+  FilterSpecialization,
+} from '@/features/filterQuestion'
 
 export const QuestionsFilter = () => {
   return (
     <div className={s.container}>
-      <SearchQuestion />
-      <FilterSpecializations />
+      <FilterKeyword />
+      <FilterSpecialization />
       <FilterSkills />
       <FilterComplexity />
       <FilterRating />

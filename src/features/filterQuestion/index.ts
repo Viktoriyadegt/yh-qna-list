@@ -1,7 +1,8 @@
-export * from './ui/complexity/FilterComplexity.tsx'
-export * from './ui/specialization/FilterSpecializations.tsx'
-export * from './ui/skill/FilterSkills.tsx'
-export * from './ui/rating/FilterRating.tsx'
+export * from '@/features/filterQuestion/ui/filterComplexity/FilterComplexity.tsx'
+export * from '@/features/filterQuestion/ui/filterSpecialization/FilterSpecialization.tsx'
+export * from '@/features/filterQuestion/ui/filterSkills/FilterSkills.tsx'
+export * from '@/features/filterQuestion/ui/filterRating/FilterRating.tsx'
+export * from '@/features/filterQuestion/ui/filterKeyword/FilterKeyword.tsx'
 export {
   selectSpecializations,
   selectRate,

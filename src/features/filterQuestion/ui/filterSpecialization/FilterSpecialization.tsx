@@ -7,7 +7,7 @@ import { LimitedSection } from '@/entities/limits'
 import { selectSpecializations, setSpecialization } from '@/features/filterQuestion'
 import { Button } from '@/shared/ui'
 
-export const FilterSpecializations = () => {
+export const FilterSpecialization = () => {
   const selected = useAppSelector(selectSpecializations)
   const specialTotal = useAppSelector(selectSpecialTotal)
   const { data } = useGetSpecializationsQuery({ page: 1, limit: specialTotal, authorId: '' })

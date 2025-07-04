@@ -4,7 +4,7 @@ import { useDebounce } from '@/shared/hooks'
 import { selectTitle, setTitle } from '@/features/filterQuestion'
 import { Input } from '@/shared/ui'
 
-export const SearchQuestion = () => {
+export const FilterKeyword = () => {
   const dispatch = useAppDispatch()
   const [search, setSearch] = useState('')
   const debouncedSearch = useDebounce(search, 1000)
