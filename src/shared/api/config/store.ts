@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { baseApi } from '../base/baseApi.ts'
-import { filterReducer, filterSlice } from '@/features/filterQuestion/model/filterSlice.ts'
+import { filterReducer, filterSlice } from '@/features/filterQuestions/model/slice/filterSlice.ts'
 import { limitReducer } from '@/entities/limits'
 import { limitSlice } from '@/entities/limits/model/slice/limitSlice.ts'
 

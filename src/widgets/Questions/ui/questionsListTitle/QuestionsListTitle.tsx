@@ -1,7 +1,7 @@
 import s from '../Questions.module.css'
 import { Text } from '@/shared/ui'
 import { useAppSelector } from '@/shared/api/config/store.ts'
-import { selectSpecializations } from '@/features/filterQuestion'
+import { selectSpecializations } from '@/features/filterQuestions'
 import { useGetSpecializationQuery } from '@/entities/specializations'
 
 export const QuestionsListTitle = () => {

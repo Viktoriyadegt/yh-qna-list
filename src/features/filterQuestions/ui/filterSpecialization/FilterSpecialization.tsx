@@ -4,7 +4,7 @@ import { useAppSelector } from '@/shared/api/config/store.ts'
 import { selectSpecialTotal, setSpecialTotal } from '@/entities/limits'
 import { useToggleLimit } from '@/entities/limits'
 import { LimitedSection } from '@/entities/limits'
-import { selectSpecializations, setSpecialization } from '@/features/filterQuestion'
+import { selectSpecializations, setSpecialization } from '@/features/filterQuestions'
 import { Button } from '@/shared/ui'
 
 export const FilterSpecialization = () => {

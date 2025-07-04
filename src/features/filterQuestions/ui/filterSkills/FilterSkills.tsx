@@ -2,8 +2,8 @@ import { useDispatch } from 'react-redux'
 import { useGetSkillsQuery } from '@/entities/skills'
 import { selectSkillTotal, setSkillTotal } from '@/entities/limits'
 import { LimitedSection, useToggleLimit } from '@/entities/limits'
-import { useAppSelector } from '@/shared/api/config/store'
-import { selectSkills, selectSpecializations, setSkills } from '@/features/filterQuestion'
+import { useAppSelector } from '@/shared/api/config/store.ts'
+import { selectSkills, selectSpecializations, setSkills } from '@/features/filterQuestions'
 import { Button } from '@/shared/ui'
 
 export const FilterSkills = () => {

@@ -1,5 +1,5 @@
 import { useAppDispatch } from '@/shared/api/config/store.ts'
-import { resetFilters } from '@/features/filterQuestion'
+import { resetFilters } from '@/features/filterQuestions'
 import { Text, Button } from '@/shared/ui'
 import s from './QuestionsEmpty.module.css'
 

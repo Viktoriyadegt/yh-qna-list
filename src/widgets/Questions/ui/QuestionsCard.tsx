@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom'
 import s from './Questions.module.css'
 import { useAppDispatch, useAppSelector } from '@/shared/api/config/store.ts'
-import { selectFilters, setFilters, setPage } from '@/features/filterQuestion'
+import { selectFilters, setFilters, setPage } from '@/features/filterQuestions'
 import { useGetQuestionsQuery } from '@/entities/questions'
 import { QuestionsEmpty, QuestionsList, QuestionsListSkeleton, QuestionsListTitle } from '@/widgets/Questions'
 import Card from '@/shared/ui/Card/Card'

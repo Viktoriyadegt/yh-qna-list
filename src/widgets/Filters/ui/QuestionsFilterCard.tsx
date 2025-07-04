@@ -1,6 +1,6 @@
 import Card from '@/shared/ui/Card/Card.tsx'
 import s from './QuestionsFilterCard.module.css'
-import { selectSpecializations } from '@/features/filterQuestion'
+import { selectSpecializations } from '@/features/filterQuestions'
 import { useAppSelector } from '@/shared/api/config/store.ts'
 import { useGetSkillsQuery } from '@/entities/skills'
 import { selectSkillTotal } from '@/entities/limits'

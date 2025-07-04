@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '@/shared/api/config/store.ts'
 import { useEffect, useState } from 'react'
 import { useDebounce } from '@/shared/hooks'
-import { selectTitle, setTitle } from '@/features/filterQuestion'
+import { selectTitle, setTitle } from '@/features/filterQuestions'
 import { Input } from '@/shared/ui'
 
 export const FilterKeyword = () => {

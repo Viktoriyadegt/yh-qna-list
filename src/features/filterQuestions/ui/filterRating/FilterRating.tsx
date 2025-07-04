@@ -1,10 +1,9 @@
 import { useAppSelector } from '@/shared/api/config/store.ts'
 import { useDispatch } from 'react-redux'
-import s from '@/features/filterQuestion/ui/filterSpecialization/FilterSpecialization.module.css'
+import s from '@/features/filterQuestions/ui/filterSpecialization/FilterSpecialization.module.css'
 import { Button, Text } from '@/shared/ui'
-import { selectRate, setRate } from '@/features/filterQuestion'
-
-const RATING_VALUES = [1, 2, 3, 4, 5]
+import { selectRate, setRate } from '@/features/filterQuestions'
+import { RATING_VALUES } from '@/features/filterQuestions/model/const/const.ts'
 
 export const FilterRating = () => {
   const selected = useAppSelector(selectRate)

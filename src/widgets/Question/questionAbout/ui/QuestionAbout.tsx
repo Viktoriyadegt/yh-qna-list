@@ -12,8 +12,8 @@ export const QuestionAbout = ({ question }: Props) => {
     <div className={s.container}>
       <Card className={s.card}>
         <SectionInfo title={'Level'}>
-          <Grade label="FilterRating" value={question.rate} />
-          <Grade label="FilterComplexity" value={question.complexity} />
+          <Grade label={'Rating'} value={question.rate} />
+          <Grade label={'Complexity'} value={question.complexity} />
         </SectionInfo>
         <SectionInfo title={'Skills'}>
           <SkillsInfo skills={question.questionSkills} />

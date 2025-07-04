@@ -5,7 +5,7 @@ import {
   FilterRating,
   FilterSkills,
   FilterSpecialization,
-} from '@/features/filterQuestion'
+} from '@/features/filterQuestions'
 
 export const QuestionsFilter = () => {
   return (
