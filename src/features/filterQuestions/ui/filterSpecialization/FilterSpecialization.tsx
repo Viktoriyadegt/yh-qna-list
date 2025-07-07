@@ -1,9 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { useGetSpecializationsQuery } from '@/entities/specializations'
 import { useAppSelector } from '@/shared/api/config/store.ts'
-import { selectSpecialTotal, setSpecialTotal } from '@/entities/limits'
+import { LimitSection, selectSpecialTotal, setSpecialTotal } from '@/entities/limits'
 import { useToggleLimit } from '@/entities/limits'
-import { LimitedSection } from '@/entities/limits'
 import { selectSpecializations, setSpecialization } from '@/features/filterQuestions'
 import { Button } from '@/shared/ui'
 
@@ -17,7 +16,7 @@ export const FilterSpecialization = () => {
   const { show, toggleShow } = useToggleLimit(specialTotal, 5, total, setSpecialTotal)
 
   return (
-    <LimitedSection title="Select a specialization" show={show} onToggle={toggleShow}>
+    <LimitSection title="Select a specialization" show={show} onToggle={toggleShow}>
       {data?.data.map((item) => (
         <Button
           key={item.id}
@@ -28,6 +27,6 @@ export const FilterSpecialization = () => {
           {item.title}
         </Button>
       ))}
-    </LimitedSection>
+    </LimitSection>
   )
 }

@@ -3,14 +3,14 @@ import { Button, Text } from '@/shared/ui'
 
 import type { ReactNode } from 'react'
 
-type LimitedSectionProps = {
+type LimitSectionProps = {
   title: string
   show: boolean
   onToggle: () => void
   children: ReactNode
 }
 
-export const LimitedSection = ({ title, show, onToggle, children }: LimitedSectionProps) => (
+export const LimitSection = ({ title, show, onToggle, children }: LimitSectionProps) => (
   <div className={s.container}>
     <Text variant={'body-14'} color={'black'}>
       {title}

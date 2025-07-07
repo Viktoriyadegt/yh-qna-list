@@ -3,14 +3,15 @@ import { setupListeners } from '@reduxjs/toolkit/query/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { baseApi } from '../base/baseApi.ts'
 import { filterReducer, filterSlice } from '@/features/filterQuestions/model/slice/filterSlice.ts'
-import { limitReducer } from '@/entities/limits'
-import { limitSlice } from '@/entities/limits/model/slice/limitSlice.ts'
+import { specialReducer, specialSlice } from '@/entities/specializations/model/slice/specialSlice.ts'
+import { skillReducer, skillSlice } from '@/entities/skills'
 
 export const store = configureStore({
   reducer: {
     [baseApi.reducerPath]: baseApi.reducer,
     [filterSlice.name]: filterReducer,
-    [limitSlice.name]: limitReducer,
+    [specialSlice.name]: specialReducer,
+    [skillSlice.name]: skillReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
 })
