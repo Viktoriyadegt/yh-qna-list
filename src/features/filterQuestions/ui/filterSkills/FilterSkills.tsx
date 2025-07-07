@@ -1,37 +1,19 @@
-import { useDispatch } from 'react-redux'
-import { selectSkillTotal, setSkillTotal, useGetSkillsQuery } from '@/entities/skills'
-import { useAppSelector } from '@/shared/api/config/store.ts'
-import { selectSkills, selectSpecializations, setSkills } from '@/features/filterQuestions'
-import { Button, LimitSection } from '@/shared/ui'
+import { useGetSkillsQuery } from '@/entities/skills'
+import { LimitSection } from '@/shared/ui'
 import { useToggleLimit } from '@/shared/hooks'
+import { SkillsList } from '@/entities/skills/ui/skillsList.tsx'
+
+const MIN_LIMIT = 5
 
 export const FilterSkills = () => {
-  const dispatch = useDispatch()
-  const selected = useAppSelector(selectSkills)
-  const skillTotal = useAppSelector(selectSkillTotal)
-  const specializations = useAppSelector(selectSpecializations)
-  const { data: skills } = useGetSkillsQuery({ limit: skillTotal, specializations })
-  const total = skills?.total || 8
+  const { data: skills } = useGetSkillsQuery({ limit: MIN_LIMIT })
+  const total = skills?.total || MIN_LIMIT
 
-  const { show, toggleShow } = useToggleLimit(skillTotal, 8, total, setSkillTotal)
-
-  const handlerChooseSkill = (id: number) => {
-    dispatch(setSkills(id))
-  }
+  const { toggleShow, show, limit } = useToggleLimit({ expandedLimit: total, defaultLimit: MIN_LIMIT })
 
   return (
     <LimitSection title="Select skills" show={show} onToggle={toggleShow}>
-      {skills?.data.map((item) => (
-        <Button
-          key={item.id}
-          variant={'chip'}
-          onClick={() => handlerChooseSkill(item.id)}
-          isActive={selected?.includes(item.id)}
-        >
-          <img loading={'lazy'} src={item.imageSrc} alt={item.title} />
-          {item.title}
-        </Button>
-      ))}
+      <SkillsList limit={limit} />
     </LimitSection>
   )
 }

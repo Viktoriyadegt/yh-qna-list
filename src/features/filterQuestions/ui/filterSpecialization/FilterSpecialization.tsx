@@ -1,35 +1,19 @@
-import { useDispatch } from 'react-redux'
-import { selectSpecialTotal, setSpecialTotal, useGetSpecializationsQuery } from '@/entities/specializations'
-import { useAppSelector } from '@/shared/api/config/store.ts'
-import { selectSpecializations, setSpecialization } from '@/features/filterQuestions'
-import { Button, LimitSection } from '@/shared/ui'
+import { useGetSpecializationsQuery } from '@/entities/specializations/api/specializationsApi.ts'
 import { useToggleLimit } from '@/shared/hooks'
+import { LimitSection } from '@/shared/ui'
+import { SpecializationsList } from '@/entities/specializations/ui/specializationsList.tsx'
+
+const MIN_LIMIT = 5
 
 export const FilterSpecialization = () => {
-  const selected = useAppSelector(selectSpecializations)
-  const specialTotal = useAppSelector(selectSpecialTotal)
-  const { data } = useGetSpecializationsQuery({ page: 1, limit: specialTotal, authorId: '' })
-  const total = data?.total || 5
-  const dispatch = useDispatch()
+  const { data } = useGetSpecializationsQuery({ page: 1, limit: MIN_LIMIT, authorId: '' })
+  const total = data?.total || MIN_LIMIT
 
-  const { show, toggleShow } = useToggleLimit(specialTotal, 5, total, setSpecialTotal)
-
-  const handlerChooseSpecial = (id: number) => {
-    dispatch(setSpecialization(String(id)))
-  }
+  const { show, toggleShow, limit } = useToggleLimit({ expandedLimit: total, defaultLimit: MIN_LIMIT })
 
   return (
     <LimitSection title="Select a specialization" show={show} onToggle={toggleShow}>
-      {data?.data.map((item) => (
-        <Button
-          key={item.id}
-          variant={'chip'}
-          onClick={() => handlerChooseSpecial(item.id)}
-          isActive={+selected === item.id}
-        >
-          {item.title}
-        </Button>
-      ))}
+      <SpecializationsList limit={limit} />
     </LimitSection>
   )
 }

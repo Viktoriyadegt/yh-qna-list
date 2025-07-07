@@ -27,5 +27,5 @@ export type SkillsResponse = {
 export type FiltersQuery = {
   page?: number
   limit: number
-  specializations: string
+  specializations?: string
 }

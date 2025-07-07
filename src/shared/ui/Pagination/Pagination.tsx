@@ -48,7 +48,7 @@ export const Pagination = (props: Type) => {
 
         {paginationRange.map((pageNumber, index) => {
           if (pageNumber === DOTS) {
-            return <img src={dots} alt="Dots" className={'dots'} />
+            return <img key={index} src={dots} alt="Dots" className={'dots'} />
           }
 
           return (

@@ -1,20 +1,27 @@
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import type { AppDispatch } from '@/shared/api/config/store.ts'
+import { useEffect, useState } from 'react'
 
-export const useToggleLimit = <T extends (n: number) => { type: string; payload: number }>(
-  currentLimit: number,
-  collapsedLimit: number,
-  expandedLimit: number,
-  setLimitAction: T,
-) => {
+type Props = {
+  expandedLimit: number
+  defaultLimit: number
+}
+
+export const useToggleLimit = ({ expandedLimit, defaultLimit }: Props) => {
   const [show, setShow] = useState(false)
-  const dispatch = useDispatch<AppDispatch>()
+  const [limit, setLimit] = useState(defaultLimit)
+
+  useEffect(() => {
+    setLimit((prev) => {
+      if (prev === defaultLimit) {
+        return expandedLimit
+      } else {
+        return defaultLimit
+      }
+    })
+  }, [show])
 
   const toggleShow = () => {
-    setShow((prev) => !prev)
-    dispatch(setLimitAction(currentLimit === expandedLimit ? collapsedLimit : expandedLimit))
+    setShow(!show)
   }
 
-  return { show, toggleShow }
+  return { show, toggleShow, limit }
 }
