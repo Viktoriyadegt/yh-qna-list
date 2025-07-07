@@ -15,13 +15,17 @@ export const FilterSkills = () => {
 
   const { show, toggleShow } = useToggleLimit(skillTotal, 8, total, setSkillTotal)
 
+  const handlerChooseSkill = (id: number) => {
+    dispatch(setSkills(id))
+  }
+
   return (
     <LimitSection title="Select skills" show={show} onToggle={toggleShow}>
       {skills?.data.map((item) => (
         <Button
           key={item.id}
           variant={'chip'}
-          onClick={() => dispatch(setSkills(item.id))}
+          onClick={() => handlerChooseSkill(item.id)}
           isActive={selected?.includes(item.id)}
         >
           <img loading={'lazy'} src={item.imageSrc} alt={item.title} />

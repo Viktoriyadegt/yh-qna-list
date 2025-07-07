@@ -8,7 +8,7 @@ export const FilterComplexity = () => {
   const selected = useAppSelector(selectComplexity)
   const dispatch = useDispatch()
 
-  const handlerChoose = (value: number[]) => {
+  const handlerChooseComplexity = (value: number[]) => {
     dispatch(setComplexity(value))
   }
 
@@ -19,7 +19,7 @@ export const FilterComplexity = () => {
           <Button
             id={v.id}
             variant={'chip'}
-            onClick={() => handlerChoose(v.value)}
+            onClick={() => handlerChooseComplexity(v.value)}
             isActive={selected.includes(v.value[0])}
           >
             {v.title}

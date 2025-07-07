@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '@/shared/api/config/store.ts'
-import { useEffect, useState } from 'react'
+import { type ChangeEvent, useEffect, useState } from 'react'
 import { useDebounce } from '@/shared/hooks'
 import { selectTitle, setTitle } from '@/features/filterQuestions'
 import { Input } from '@/shared/ui'
@@ -18,5 +18,9 @@ export const FilterKeyword = () => {
     setSearch(keywords || '')
   }, [keywords])
 
-  return <Input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Enter a query..." />
+  const handlerSearchQuestion = (e: ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value)
+  }
+
+  return <Input value={search} onChange={handlerSearchQuestion} placeholder="Enter a query..." />
 }

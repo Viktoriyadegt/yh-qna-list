@@ -14,13 +14,17 @@ export const FilterSpecialization = () => {
 
   const { show, toggleShow } = useToggleLimit(specialTotal, 5, total, setSpecialTotal)
 
+  const handlerChooseSpecial = (id: number) => {
+    dispatch(setSpecialization(String(id)))
+  }
+
   return (
     <LimitSection title="Select a specialization" show={show} onToggle={toggleShow}>
       {data?.data.map((item) => (
         <Button
           key={item.id}
           variant={'chip'}
-          onClick={() => dispatch(setSpecialization(String(item.id)))}
+          onClick={() => handlerChooseSpecial(item.id)}
           isActive={+selected === item.id}
         >
           {item.title}
