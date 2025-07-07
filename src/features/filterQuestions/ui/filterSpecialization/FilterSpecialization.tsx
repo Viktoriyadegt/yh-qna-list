@@ -1,10 +1,9 @@
 import { useDispatch } from 'react-redux'
-import { useGetSpecializationsQuery } from '@/entities/specializations'
+import { selectSpecialTotal, setSpecialTotal, useGetSpecializationsQuery } from '@/entities/specializations'
 import { useAppSelector } from '@/shared/api/config/store.ts'
-import { LimitSection, selectSpecialTotal, setSpecialTotal } from '@/entities/limits'
-import { useToggleLimit } from '@/entities/limits'
 import { selectSpecializations, setSpecialization } from '@/features/filterQuestions'
-import { Button } from '@/shared/ui'
+import { Button, LimitSection } from '@/shared/ui'
+import { useToggleLimit } from '@/shared/hooks'
 
 export const FilterSpecialization = () => {
   const selected = useAppSelector(selectSpecializations)

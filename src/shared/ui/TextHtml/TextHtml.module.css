@@ -1,0 +1,9 @@
+.htmlText {
+    white-space: pre-wrap;
+}
+
+.htmlText code {
+    padding: 2px 5px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--color-white-900) 0%, var(--color-purple-200) 100%);
+}

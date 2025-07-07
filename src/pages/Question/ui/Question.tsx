@@ -1,7 +1,6 @@
 import s from './Question.module.css'
-import { useGetQuestionQuery } from '@/entities/questions'
+import { QuestionCard, useGetQuestionQuery } from '@/entities/questions'
 import { useParams } from 'react-router-dom'
-import { QuestionCard } from '@/widgets/Question/questionCard'
 import { QuestionAbout } from '@/widgets/Question/questionAbout'
 import { NavigateButton } from '@/pages/Question'
 

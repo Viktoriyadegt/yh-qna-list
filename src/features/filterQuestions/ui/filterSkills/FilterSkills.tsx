@@ -1,10 +1,9 @@
 import { useDispatch } from 'react-redux'
-import { useGetSkillsQuery } from '@/entities/skills'
-import { selectSkillTotal, setSkillTotal } from '@/entities/limits'
-import { LimitedSection, useToggleLimit } from '@/entities/limits'
+import { selectSkillTotal, setSkillTotal, useGetSkillsQuery } from '@/entities/skills'
 import { useAppSelector } from '@/shared/api/config/store.ts'
 import { selectSkills, selectSpecializations, setSkills } from '@/features/filterQuestions'
-import { Button } from '@/shared/ui'
+import { Button, LimitSection } from '@/shared/ui'
+import { useToggleLimit } from '@/shared/hooks'
 
 export const FilterSkills = () => {
   const dispatch = useDispatch()
@@ -17,7 +16,7 @@ export const FilterSkills = () => {
   const { show, toggleShow } = useToggleLimit(skillTotal, 8, total, setSkillTotal)
 
   return (
-    <LimitedSection title="Select skills" show={show} onToggle={toggleShow}>
+    <LimitSection title="Select skills" show={show} onToggle={toggleShow}>
       {skills?.data.map((item) => (
         <Button
           key={item.id}
@@ -29,6 +28,6 @@ export const FilterSkills = () => {
           {item.title}
         </Button>
       ))}
-    </LimitedSection>
+    </LimitSection>
   )
 }

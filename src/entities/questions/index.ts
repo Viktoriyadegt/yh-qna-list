@@ -1,5 +1,6 @@
 export * from './ui/authorInfo/AuthorInfo.tsx'
 export * from './ui/skillsInfo/SkillsInfo.tsx'
 export * from './ui/keywordsInfo/KeywordsInfo.tsx'
+export * from './ui/questionCard/QuestionCard.tsx'
 export type { QuestionsResponse, QuestionSkill, Question, QuestionSpecialization, FiltersQuery } from './model/types.ts'
 export { useGetQuestionQuery, useGetQuestionsQuery } from './api/questionsApi.ts'
